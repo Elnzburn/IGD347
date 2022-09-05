@@ -20,7 +20,8 @@
                 Console.WriteLine("Magikarp");
             }
             Console.WriteLine("---------------------");
-            Console.WriteLine(gacha_result);
+            Console.WriteLine("i've got " + gacha_result);
+            Console.ReadKey();
         }
     }
 }
