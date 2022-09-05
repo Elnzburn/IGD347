@@ -3,51 +3,25 @@ namespace Pikaattack
 {
     internal class Program
     {
-        static int Pika_attack(int goldduck_hp,int pika_choice)
+        public static void Main(string[] args)
         {
-            Random dog = new Random();
-            pika_choice = dog.Next(1, 10);
-            //pika choice ->>
-            if (pika_choice <= 3)
+            Random rnd = new Random();
+            int gacha_result = rnd.Next(1, 10);
+            
+            if (gacha_result ==1)
             {
-                goldduck_hp = goldduck_hp - 15;
-                Console.WriteLine("using body slam!!!");
+                Console.WriteLine("Chalizard");
             }
-            else if (pika_choice !=3 && pika_choice <=5)
+            else if (gacha_result !=1 && gacha_result <=7)
             {
-                goldduck_hp = goldduck_hp - 10;
-                Console.WriteLine("using thunder bolt!!");
+                Console.WriteLine("Pikachu");
             }
             else
             {
-                goldduck_hp = goldduck_hp - 5;
-                Console.WriteLine("using tackle!");
+                Console.WriteLine("Magikarp");
             }
-            Console.WriteLine(goldduck_hp);
-            return goldduck_hp;
-        }
-        public static void Main(string[] args)
-        {
-            int goldduck_hp = 100;
-            int pika_choice = 3;
-
-            /*for (int i = 0; i <= 20; i++)
-            {
-                goldduck_hp = Pika_attack(goldduck_hp, pika_choice);
-            }*/
-            for (int i = 0; i <= 10; i++)
-            {
-                goldduck_hp = Pika_attack(goldduck_hp, pika_choice);
-                if (goldduck_hp <=0)
-                {
-                    Console.WriteLine("Your monster fainted out");
-                    break;
-                }
-            }
-            Console.ReadKey();
-            
-            //Console.WriteLine("Your monster fainted out");
-
+            Console.WriteLine("---------------------");
+            Console.WriteLine(gacha_result);
         }
     }
 }
