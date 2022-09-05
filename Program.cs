@@ -8,12 +8,12 @@ namespace Pikaattack
             Random dog = new Random();
             pika_choice = dog.Next(1, 10);
             //pika choice ->>
-            if (pika_choice >= 3)
+            if (pika_choice <= 3)
             {
                 goldduck_hp = goldduck_hp - 15;
                 Console.WriteLine("using body slam!!!");
             }
-            else if (pika_choice !=3 && pika_choice >=5)
+            else if (pika_choice !=3 && pika_choice <=5)
             {
                 goldduck_hp = goldduck_hp - 10;
                 Console.WriteLine("using thunder bolt!!");
@@ -35,7 +35,7 @@ namespace Pikaattack
             {
                 goldduck_hp = Pika_attack(goldduck_hp, pika_choice);
             }*/
-            for (int i = 0; i <= 20; i++)
+            for (int i = 0; i <= 10; i++)
             {
                 goldduck_hp = Pika_attack(goldduck_hp, pika_choice);
                 if (goldduck_hp <=0)
