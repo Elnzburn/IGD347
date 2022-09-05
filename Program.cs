@@ -1,5 +1,4 @@
-﻿//using System;
-namespace Pikaattack
+﻿namespace Pikaattack
 {
     internal class Program
     {
@@ -30,11 +29,6 @@ namespace Pikaattack
         {
             int goldduck_hp = 100;
             int pika_choice = 3;
-
-            /*for (int i = 0; i <= 20; i++)
-            {
-                goldduck_hp = Pika_attack(goldduck_hp, pika_choice);
-            }*/
             for (int i = 0; i <= 10; i++)
             {
                 goldduck_hp = Pika_attack(goldduck_hp, pika_choice);
@@ -45,9 +39,6 @@ namespace Pikaattack
                 }
             }
             Console.ReadKey();
-            
-            //Console.WriteLine("Your monster fainted out");
-
         }
     }
 }
